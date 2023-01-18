@@ -4,7 +4,9 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Set;
 
 
@@ -43,6 +45,10 @@ public class Formation {
     //private User formateur = new User();
 
     private Integer userId;
+
+    @Transient
+    private List<Quiz> quizzes = new ArrayList<>();
+
    /* @ManyToMany
     @JsonIgnore
     private Set<User> apprenant ;

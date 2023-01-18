@@ -3,8 +3,9 @@ package iomicroservice.userdataservice.Entity;
 
 import lombok.*;
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
-
+import java.util.List;
 
 
 @Entity
@@ -36,6 +37,11 @@ public class Formation {
 
     private Integer likes;
     private Integer dislikes;
+
+    private Integer userId;
+
+    @Transient
+    private List<Quiz> quizzes = new ArrayList<>();
 
 
 
